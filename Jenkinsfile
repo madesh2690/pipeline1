@@ -1,8 +1,8 @@
 node('master'){
-stage('scm'){
-node('master'){
-sh "echo 'pipeline'"
-}
 
-}
+      stage('scm'){
+             //sh "echo 'pipeline'"
+           sh " mkdir -p test"
+
+                  }
 }
