@@ -2,7 +2,7 @@ node('master'){
 
       stage('scm'){
              //sh "echo 'pipeline'"
-           sh " mkdir -p test"
+           sh " mkdir test"
 
                   }
 }
