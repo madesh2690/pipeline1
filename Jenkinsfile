@@ -1,5 +1,8 @@
-node('master1'){
+node('master'){
 stage('scm'){
+node('master'){
 sh "echo 'pipeline'"
+}
+
 }
 }
