@@ -2,7 +2,9 @@ node('master'){
      
        stage('Preparion'){
             mvnHome=/usr/share/maven/
-            sh "mvn -v" 
+            sh "mvn -v"
+                   }
+ 
        stage('scm'){
            sh " mkdir -p test"
            writeFile file: "test/test1file.txt", text: "sample file"
