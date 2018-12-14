@@ -6,7 +6,8 @@ node('master'){
                   // }
 
     environment{
-           PATH="/usr/share/maven/bin:$PATH"
+        MAVEN_HOME=/usr/share/maven   
+        //PATH="${MAVEN_HOME}/bin:$PATH"
         }
  
  
@@ -14,8 +15,8 @@ node('master'){
            sh " mkdir -p test"
            writeFile file: "test/test1file.txt", text: "sample file"
            writeFile file: "test/test1file.md", text: "sample1"i
-           sh "echo '$PATH'"
-           sh "mvn clean"
+           //sh "echo '$PATH'"
+           sh "${MAVEN_HOME}/bin clean"
 
 
                   }
