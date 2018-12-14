@@ -5,7 +5,7 @@ node('master'){
            // sh "mvn -v"
                   // }
 
-    enviroment{
+    environment{
            PATH="/usr/share/maven/bin:$PATH"
         }
  
