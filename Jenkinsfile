@@ -9,11 +9,18 @@ node('master'){
  
      stage('scm'){
           git url:'https://github.com/madesh2690/maven-hello-world.git'
+          
+          deleteDir()
+
+                }
+     stage('Build'){
+          git url:'https://github.com/madesh2690/maven-hello-world.git'
           sh "echo '=======Build Started=================='"
           sh "mvn -f my-app/pom.xml clean package"
           sh "echo '=============Buil Succuss============='"
-
+          
+          
                 }
      
-     deleteDir()
+     
 }
