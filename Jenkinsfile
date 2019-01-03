@@ -12,6 +12,7 @@ node('master'){
         //writeFile file: "test/test1file.txt", text: "sample file"
         //writeFile file: "test/test1file.md", text: "sample1"i
         //sh "echo '$PATH'"
+        sh "cd my-app"
         sh "mvn clean"
 
                 }
