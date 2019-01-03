@@ -14,7 +14,7 @@ node('master'){
 
                 }
      stage('Build'){
-          checkout ([$class: 'GitSCM', branch: [[name: '/java7checker/]], url: 'https://github.com/madesh2690/maven-hello-world.git') 
+          checkout ([$class: 'GitSCM', branch: [[name: '/java7checker/]], url: 'https://github.com/madesh2690/maven-hello-world.git']) 
           sh "echo '=======Build Started=================='"
           sh "mvn -f my-app/pom.xml clean package"
           sh "echo '=============Buil Succuss============='"
