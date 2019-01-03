@@ -14,7 +14,7 @@ node('master'){
 
                 }
      stage('Build'){
-          git url:'https://github.com/madesh2690/maven-hello-world.git'
+          git url:'https://github.com/madesh2690/maven-hello-world.git' branch: 'java7checker'
           sh "echo '=======Build Started=================='"
           sh "mvn -f my-app/pom.xml clean package"
           sh "echo '=============Buil Succuss============='"
