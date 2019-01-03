@@ -12,5 +12,5 @@ node('master'){
          sh "mvn clean package"
 
                 }
-     //deleteDir()
+     deleteDir()
 }
