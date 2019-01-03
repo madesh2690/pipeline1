@@ -9,7 +9,7 @@ node('master'){
  
      stage('scm'){
           git url: 'https://github.com/bobbalababu/JenkinsOnEC2MavenProject.git'
-         sh "mvn -f my-app/pom.xml clean package"
+         sh "mvn clean package"
 
                 }
 }
