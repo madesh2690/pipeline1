@@ -8,7 +8,7 @@ node('master'){
      
  
      stage('scm'){
-          git url:'https://github.com/madesh2690/maven-hello-world.git'
+          //git url:'https://github.com/madesh2690/maven-hello-world.git'
           
           deleteDir()
 
