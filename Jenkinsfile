@@ -3,7 +3,7 @@ node('master'){
      stage('scm'){
           deleteDir()
           //git url:'https://github.com/madesh2690/maven-hello-world.git'
-          checkout ([$class: 'GitSCM', branchs: [[name: 'java7checker']], userRemoteConfigs: [[url: 'https://github.com/madesh2690/maven-hello-world.git']]]) 
+          checkout ([$class: 'GitSCM', branchs: [[name: '*/java7checker']], userRemoteConfigs: [[url: 'https://github.com/madesh2690/maven-hello-world.git']]]) 
         
       
 
