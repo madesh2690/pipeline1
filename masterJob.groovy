@@ -3,7 +3,7 @@
 appName="CLK"
 
 pipeline {
-  agent {'master'}
+  agent {label master}
   stages {
      stage ('Build'){
        steps {
