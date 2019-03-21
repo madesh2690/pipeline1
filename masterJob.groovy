@@ -4,11 +4,11 @@ appName="CLK"
 
 pipeline {
   stages {
-     stage ('Build') {
+     stage ('Build'){
           sh "echo ${appName}"
 
          }
-}
+     }
 }
 
 
