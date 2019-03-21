@@ -8,6 +8,7 @@ pipeline {
      stage ('Build'){
        steps {
           sh "echo ${appName}"
+          parameters: [$class: 'ChoiceParameterDefinition', "ENV_NAME", choice: "madesh", description: "selcte my name"]
                }
          }
      }
