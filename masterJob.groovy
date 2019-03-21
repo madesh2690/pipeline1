@@ -8,7 +8,7 @@ pipeline {
      stage ('Build'){
        steps {
           sh "echo ${appName}"
-          parameters: [$class: 'ChoiceParameterDefinition', name: "ENV_NAME", choice: "madesh", description: "selcte my name"]
+          userInput = input( id: 'Procced 2', message: 'Enter panameter', parameters: [$class: 'ChoiceParameterDefinition', name: "ENV_NAME", choice: "madesh", description: "selcte my name"]
                }
          }
      }
