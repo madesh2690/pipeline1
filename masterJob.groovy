@@ -4,7 +4,10 @@ appName="CLK"
 
 pipeline {
   agent {label "master"}
-  stages {
+  parameter {
+    choice ( name: 'Nodes', choices: "Linux\nMac", description: "Chosee Nodes!")
+          }
+            stages {
      stage ('Build'){
        steps {
           sh "echo ${appName}"
