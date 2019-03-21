@@ -4,7 +4,7 @@ appName="CLK"
 
 pipeline {
   agent {label "master"}
-  parameter {
+  parameters {
     choice ( name: 'Nodes', choices: "Linux\nMac", description: "Chosee Nodes!")
           }
             stages {
