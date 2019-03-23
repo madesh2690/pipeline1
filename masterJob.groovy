@@ -10,10 +10,11 @@ pipeline {
             stages {
      stage ('Build'){
        steps {
-          sh "echo ${appName}"
+          //sh "echo ${appName}"
+         def inputParams = inputParamsString(new File(pwd()))
          //def userInput = input( id: 'userInput', message: 'Enetr User Inputs', parameters: [$class: 'ChoiceParameterDefinition', name: 'ami', choices: Linux, description: 'AMI'])
          //build(job: 'Madesh-FreeStyle-Test', parameters: [[name: 'P1', value: '${params.Nodes}'], [$class: 'StringParameterValue', name: 'P2', value: 'BBBB']])
-         def selectedProperty = input( id: 'userInput', message: 'Choose properties file', parameters: [ [$class: 'ChoiceParameterDefinition', choices: 'inputParams', description: 'Properties', name: 'prop'] ])
+         def selectedProperty = input( id: 'userInput', message: 'Choose properties file', parameters: [ [$class: 'ChoiceParameterDefinition', choices: inputParams, description: 'Properties', name: 'prop'] ])
     
     println "Property: $selectedProperty"
          //userInput = input( id: 'Procced 2', message: 'Enter panameter', parameters: [$class: 'ChoiceParameterDefinition', name: "ENV_NAME", choices: "madesh", description: "selcte my name"])
